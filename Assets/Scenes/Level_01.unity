@@ -789,6 +789,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053875720}
   m_CullTransparentMesh: 0
+--- !u!1 &1227506339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1227506341}
+  - component: {fileID: 1227506340}
+  m_Layer: 0
+  m_Name: Enemy Factory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1227506340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227506339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed0d875d99d8924eade1b9a3bacb95c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab:
+  - {fileID: 1866388459, guid: fd7a544d5ee44eb42945398246f23f7c, type: 3}
+  - {fileID: 981399368, guid: c713295236239d340991ebbee9f2d149, type: 3}
+  - {fileID: 6685389399393639245, guid: f5b18b43a67bc8344a7b6b60083a5a65, type: 3}
+--- !u!4 &1227506341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227506339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1301700633
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,8 +980,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1344946162}
   - component: {fileID: 1344946161}
-  - component: {fileID: 1344946160}
-  - component: {fileID: 1344946159}
   m_Layer: 0
   m_Name: Enemy Manager
   m_TagString: Untagged
@@ -942,40 +987,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1344946159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344946158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: {fileID: 10507404}
-  enemy: {fileID: 6685389399393639245, guid: f5b18b43a67bc8344a7b6b60083a5a65, type: 3}
-  spawnTime: 3
-  spawnPoints:
-  - {fileID: 1301700634}
---- !u!114 &1344946160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344946158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: {fileID: 10507404}
-  enemy: {fileID: 981399368, guid: c713295236239d340991ebbee9f2d149, type: 3}
-  spawnTime: 3
-  spawnPoints:
-  - {fileID: 1864591034}
 --- !u!114 &1344946161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -989,10 +1000,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 10507404}
-  enemy: {fileID: 1866388459, guid: fd7a544d5ee44eb42945398246f23f7c, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 1320163216}
+  - {fileID: 1864591034}
+  - {fileID: 1301700634}
+  factory: {fileID: 1227506340}
 --- !u!4 &1344946162
 Transform:
   m_ObjectHideFlags: 0
