@@ -25,13 +25,13 @@ public class EnemyMovement : MonoBehaviour
     void Update ()
     {
         // Memindahkan posisi player
-        //if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
-        //{
+        if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
+        {
             nav.SetDestination (player.position);
-        //}
-       // else
-        //{
-            //nav.enabled = false;
-        //}
+        }
+       else
+        {
+            nav.enabled = false;
+        }
     }
 }
