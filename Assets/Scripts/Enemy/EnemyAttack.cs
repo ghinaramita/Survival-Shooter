@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
@@ -17,28 +17,37 @@ public class EnemyAttack : MonoBehaviour
 
     void Awake ()
     {
+        // Mencari game object dengan tag "Player"
         player = GameObject.FindGameObjectWithTag ("Player");
+
+        // Mendapatkan komponen player health
         playerHealth = player.GetComponent <PlayerHealth> ();
-        //enemyHealth = GetComponent<EnemyHealth>();
+
+        // Mendapatkan komponen Animator 
         anim = GetComponent <Animator> ();
+
+        //enemyHealth = GetComponent<EnemyHealth>();
     }
 
+    // Callback jika ada suatu object masuk kedalam trigger
     void OnTriggerEnter (Collider other)
     {
+        // Set player in range
         if(other.gameObject == player && other.isTrigger == false)
         {
             playerInRange = true;
         }
     }
 
+    // Callback jika ada object yang keluar dari trigger
     void OnTriggerExit (Collider other)
     {
+        // Set player not in range
         if(other.gameObject == player)
         {
             playerInRange = false;
         }
     }
-
 
     void Update ()
     {
@@ -49,6 +58,7 @@ public class EnemyAttack : MonoBehaviour
             Attack ();
         }
 
+        // Mentrigger animasi PlayerDead jika darah player <= 0
         if (playerHealth.currentHealth <= 0)
         {
             anim.SetTrigger ("PlayerDead");
@@ -58,8 +68,10 @@ public class EnemyAttack : MonoBehaviour
 
     void Attack ()
     {
+        // Mengatur ulang timer
         timer = 0f;
 
+        // Taking damage
         if (playerHealth.currentHealth > 0)
         {
             playerHealth.TakeDamage (attackDamage);
