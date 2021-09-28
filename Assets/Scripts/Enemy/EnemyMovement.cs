@@ -8,7 +8,6 @@ public class EnemyMovement : MonoBehaviour
     EnemyHealth enemyHealth;
     UnityEngine.AI.NavMeshAgent nav;
 
-
     void Awake ()
     {
         // Cari game object dengan tag player
