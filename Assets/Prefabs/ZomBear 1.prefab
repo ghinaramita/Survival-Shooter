@@ -252,6 +252,9 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
+  powerUp:
+  - {fileID: 1722733633, guid: f5da51d50d203d9409a6c0ee5aacb90b, type: 3}
+  - {fileID: 181782437, guid: 0b73e3dfd74160e47a8aebfd35d1ffdd, type: 3}
 --- !u!114 &8615734400968563723
 MonoBehaviour:
   m_ObjectHideFlags: 0

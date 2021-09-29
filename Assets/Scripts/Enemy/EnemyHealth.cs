@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
     public float sinkSpeed = 2.5f;
     public int scoreValue = 10;
     public AudioClip deathClip;
+    public GameObject[] powerUp;
 
     Animator anim;
     AudioSource enemyAudio;
@@ -76,8 +77,17 @@ public class EnemyHealth : MonoBehaviour
         // Play sound dead
         enemyAudio.clip = deathClip;
         enemyAudio.Play ();
+
+        int randomDrop = Random.Range(0, 2);
+
+        Drop(randomDrop);
+
     }
 
+    public void Drop(int tag)
+    {
+        Instantiate(powerUp[tag], transform.position, transform.rotation);
+    }
 
     public void StartSinking ()
     {
