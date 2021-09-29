@@ -54,6 +54,11 @@ public class PlayerShooting : MonoBehaviour
 
     public void Shoot()
     {
+        if (gameObject.GetComponentInParent<PlayerHealth>().currentHealth <= 0)
+        {
+            return;
+        }
+
         timer = 0f;
 
         // Play audio

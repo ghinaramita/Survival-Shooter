@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
         Move(h, v);
         Turning();
+        Animating(h, v);
     }
 
     public void Animating(float h, float v)
@@ -67,6 +68,11 @@ public class PlayerMovement : MonoBehaviour
     // Method player dapat berjalan
     public void Move(float h, float v)
     {
+        if (gameObject.GetComponent<PlayerHealth>().currentHealth <= 0)
+        {
+            return;
+        }
+
         // Set nilai x dan y
         movement.Set(h, 0f, v);
 
