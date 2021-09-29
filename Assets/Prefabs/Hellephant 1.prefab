@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 4439585190388004353}
   - component: {fileID: 6804160543085983640}
   - component: {fileID: 3317543761171171249}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hellephant 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 1866388466}
   - component: {fileID: 1866388467}
   - component: {fileID: 8837908174234226056}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Zombunny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
