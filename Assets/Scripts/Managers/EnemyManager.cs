@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour
 
     [SerializeField]
     MonoBehaviour factory;
+
     IFactory Factory { get { return factory as IFactory; } }
 
     void Start ()
