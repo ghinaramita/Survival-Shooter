@@ -1,5 +1,5 @@
 # Survival Shooter
-This is the source code for a Survival Shooter games.
+This is the source code for a Survival Shooter game.
 
 ## Build
 The build version
